@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=DM+Serif+Text:ital@0;1&family=Playwrite+DK+Loopet:wght@100..400&family=Poetsen+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=WDXL+Lubrifont+TC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #E0E7E9;
+    line-height: 1.6;
+}
+ ul{
+    list-style: none;
+ }
+ a{
+    text-decoration: none;
+ }
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.why-choose-us h2 {
+    font-family: 'Playfair Display', serif;
+    color: #026C02;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.why-choose-us h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #8D9C63;
+    margin: 15px auto;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-item i {
+    font-size: 2.5rem;
+    color: #8D9C63;
+    margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+    color: #026C02;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .why-choose-us {
+        padding: 40px 15px;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .benefit-item {
+        padding: 15px;
+    }
+
+    .benefit-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefit-item p {
+        font-size: 0.85rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* Bố cục dọc hoàn toàn */
+        gap: 20px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .social-icons a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .benefit-item i {
+        font-size: 2rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
+/* Footer Styles */
+.site-footer {
+    background-color: #2e4f4f;
+    color: #fff;
+    padding: 60px 0 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: #8D9C63;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #8D9C63;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-section p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #E0E7E9;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #8D9C63;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #E0E7E9;
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+    color: #8D9C63;
+    margin-top: 3px;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu a {
+    color: #E0E7E9;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.footer-menu a:hover {
+    color: #8D9C63;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    background-color: #1E3A3A;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    color: #E0E7E9;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.8rem;
+    color: #E0E7E9;
+}
+
+.payment-methods i {
+    transition: color 0.3s ease;
+}
+
+.payment-methods i:hover {
+    color: #8D9C63;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,236 @@
+/* Additional styles specific to meaning page */
+        .flower-meaning-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .meaning-intro {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .meaning-intro h1 {
+            font-family: 'Playfair Display', serif;
+            color: #e60000;
+            margin-bottom: 15px;
+        }
+        
+        .meaning-intro p {
+            font-family: 'Nunito', sans-serif;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .flower-meaning-item {
+                    position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .flower-meaning-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .flower-meaning-image {
+            position: relative;
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        
+        .flower-meaning-content {
+            padding: 15px;
+        }
+        
+        .flower-meaning-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .flower-meaning-content p {
+            font-family: 'Nunito', sans-serif;
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .meaning-detail-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .meaning-modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .close-meaning-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 1.5rem;
+            color: #666;
+            cursor: pointer;
+        }
+        
+        .meaning-modal-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .meaning-modal-header h2 {
+            font-family: 'Playfair Display', serif;
+            color: #e60000;
+            font-size: 1.8rem;
+        }
+        
+        .meaning-modal-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .meaning-modal-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .meaning-modal-image img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .meaning-modal-text {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .meaning-modal-text p {
+            font-family: 'Nunito', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .meaning-colors {
+            margin-top: 20px;
+        }
+        
+        .meaning-colors h4 {
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .meaning-colors ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .meaning-colors li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .color-sample {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+        }
+@media (max-width: 768px) {
+    .flower-meaning-section {
+        padding: 15px;
+    }
+
+    .meaning-intro h1 {
+        font-size: 1.8rem; /* Giảm kích thước chữ */
+    }
+
+    .meaning-intro p {
+        font-size: 0.9rem;
+    }
+
+    .flower-meaning-item {
+        padding: 10px;
+    }
+
+    .flower-meaning-image {
+        max-width: 150px; /* Giảm kích thước ảnh */
+    }
+
+    .flower-meaning-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .flower-meaning-content p {
+        font-size: 0.85rem;
+    }
+
+    .meaning-modal-content {
+        padding: 20px;
+        margin: 10% auto;
+    }
+
+    .meaning-modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .meaning-modal-image img {
+        max-height: 250px;
+    }
+
+    .meaning-modal-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .meaning-intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .flower-meaning-image {
+        max-width: 120px;
+    }
+
+    .flower-meaning-content h3 {
+        font-size: 1rem;
+    }
+
+    .meaning-modal-content {
+        padding: 15px;
+    }
+
+    .meaning-modal-header h2 {
+        font-size: 1.3rem;
+    }
+}

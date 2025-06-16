@@ -1,0 +1,323 @@
+/* logo */
+.hero-section {
+    height: 25vh;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #dcf7e4 0%, #CFFDE1 100%); 
+    position: relative;
+    overflow: hidden;
+}
+
+
+.logo-wrapper {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    opacity: 1;
+    transform: none;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.logo-wrapper h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #026C02;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+}
+/* menu */
+
+/* Menu Redesign - Without Dropdown Icon */
+.main-menu {
+    background-color: #83dedb;
+    font-family: 'Nunito', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.menu-list > li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+}
+
+.menu-list li a {
+    color: #026C02;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+}
+
+.menu-list > li:hover,
+.menu-list > li:focus-within {
+    background-color: #9eed9e;
+}
+
+.nav__link.active, 
+.nav__link.nav-ac {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Dropdown styles - No Icon Version */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #83dedb;
+    min-width: 200px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    padding: 10px 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-height: 500px; /* Đủ lớn để chứa nội dung */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.dropdown-menu li {
+    padding: 8px 20px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu a {
+    color: #333;
+    font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+    color: #026C02;
+}
+
+/* Search bar */
+.search {
+    margin-left: 20px;
+    position: relative;
+}
+
+.search input {
+    height: 36px;
+    width: 200px;
+    padding: 0 40px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search input:focus {
+    border-color: #026C02;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(2, 108, 2, 0.2);
+}
+
+.search button {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: yellow;
+    border-radius: 10px;
+    color: #026C02;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+}
+
+.search button:hover {
+    color: #024a02;
+}
+
+/* Responsive */
+/* Mobile Menu Styles */
+/* Thêm kiểu dáng cho nút toggle menu */
+.mobile-menu-toggle {
+    display: none; /* Ẩn mặc định trên màn hình lớn */
+    background: none;
+    border: none;
+    color: #026C02;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1100;
+    padding: 5px;
+    line-height: 1;
+}
+
+/* Ẩn chữ logo trên điện thoại */
+.logo-text {
+    display: inline-block; /* Hiển thị trên màn hình lớn */
+}
+
+.logo-img {
+    width: 120px; /* Kích thước logo mặc định */
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Điều chỉnh cho chế độ di động */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block; /* Hiển thị nút toggle */
+    }
+
+    .main-menu {
+        display: none; /* Ẩn menu mặc định trên điện thoại */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 250px;
+        height: 100vh;
+        background-color: #026C02; /* Màu nền menu di động */
+        padding: 60px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    .main-menu.active {
+        display: block; /* Hiển thị khi active */
+        right: 0;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-list > li {
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .menu-list > li > a {
+        color: white; /* Màu chữ trắng cho menu di động */
+        padding: 15px 0;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: rgba(0,0,0,0.1);
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .dropdown-menu.active {
+        display: block;
+    }
+
+    .logo-text {
+        display: none; /* Ẩn chữ logo */
+    }
+
+    .logo-img {
+        width: 80px; /* Thu gọn logo */
+        margin-bottom: 0;
+    }
+
+    .search {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-menu-toggle {
+        font-size: 1.8rem;
+        right: 15px;
+        top: 15px;
+    }
+
+    .main-menu {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .menu-list > li > a {
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        width: 60px; /* Thu gọn thêm logo */
+    }
+}
+/* Thêm vào cuối file menulogo.css */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

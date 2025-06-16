@@ -1,0 +1,212 @@
+
+
+.slide-nav button {
+    background: rgba(255, 255, 255, 0.7);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-nav button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #8D9C63;
+}
+
+@media (max-width: 768px) {
+    .slide-container {
+        height: 250px; /* Giảm chiều cao */
+    }
+
+    .slide-nav button {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem; /* Tăng kích thước chữ */
+    }
+
+    .slide-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .noi_bat_list {
+        flex-wrap: wrap; /* Cho phép wrap để tránh tràn */
+        gap: 15px;
+    }
+
+    .noi_bat_item {
+        width: 160px; /* Giảm kích thước mục */
+        height: 200px;
+    }
+
+    .noi_bat_item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .noi_bat_item h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-container {
+        height: 180px;
+    }
+
+    .slide-nav button {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .slide-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .noi_bat_item {
+        width: 140px;
+        height: 180px;
+    }
+
+    .noi_bat_item img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.noi_bat{
+    color: #026C02;
+    background: #CCFFFF;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: #2E4F4F;
+}
+.noi_bat_list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.noi_bat_item {
+    background: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 30%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 5px solid #8D9C63;
+    padding: 10px;
+    text-align: center;
+}
+
+.noi_bat_item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #026C02;
+}
+
+.noi_bat_item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #A0E7E5;
+}
+
+.noi_bat_item h3 {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 1rem;
+    padding: 8px;
+}
+.slide {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.slide-nav button {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: #2E4F4F;
+    transition: all 0.3s ease;
+}
+
+.slide-nav button:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.slide-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slide-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slide-dot.active {
+    background: #8D9C63;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .slide img {
+        height: 300px;
+    }
+}
