@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/QuaTangKem.css">
+    <link rel="stylesheet" href="css/giohang.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menulogo.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    <header class="header">
+        <div class="hero-section">
+            <div class="logo-wrapper">
+                    <img src="images/logo1.png" alt="Nature Gifting Logo" class="logo-img">
+                    <h1 class="logo-text">NATURE GIFT</h1>
+            </div>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <i class="ri-menu-line"></i>
+        </button>
+        <nav class="main-menu">
+            <ul class="menu-list">
+                <li class="nav__link "><a href="index.html"><i class="ri-home-4-line"></i>HOME</a></li>
+                <li class="nav__link dropdown">
+                    <a href="#"><i class="ri-leaf-line"></i>CHỦ ĐỀ </i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sinh nhật</a></li>
+                        <li><a href="#">Kỷ niệm</a></li>
+                        <li><a href="#">Tốt nghiệp</a></li>
+                        <li><a href="#">Tình yêu</a></li>
+                        <li><a href="#">Cảm ơn</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link dropdown">
+                    <a href="#" ><i class="ri-group-line"></i>ĐỐI TƯỢNG</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="doituong.html">Hoa tặng người yêu</a></li>
+                        <li><a href="doituong.html?section=hoa-tang-ban-be">Hoa tặng bạn bè</a></li>
+                        <li><a href="doituong.html?section=hoa-tang-sep">Hoa tặng sếp</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link dropdown">
+                    <a href="#"><i class="ri-palette-line"></i>KIỂU DÁNG</i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Bó hoa tươi</a></li>
+                        <li><a href="#">Giỏ hoa tươi</a></li>
+                        <li><a href="#">Bình hoa tươi</a></li>
+                        <li><a href="#">Hộp hoa tươi</a></li>
+                        <li><a href="#">Hộp Mica</a></li>
+                    </ul>
+                </li>
+                <li class="nav__link">
+                    <a href="QuaTangKem.html"><i class="ri-gift-line"></i>Quà tặng kèm </a>
+                </li>
+
+                <li class="nav__link">
+                    <a href="#"><i class="ri-heart-line"></i>Ý NGHĨA</a>
+                </li>
+                <li class="search">
+                    <input type="text" placeholder="Tìm kiếm quà tặng..." aria-label="Nhập từ khóa tìm kiếm">
+                    <button type="submit" aria-label="Tìm kiếm">🔍</button>
+                </li>
+            </ul>
+            <a href="giohang.html" class="active nav-ac">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-items-container">
+            <div class="empty-message">
+                <p>Không có sản phẩm nào trong giỏ hàng!</p>
+                <a href="index.html" class="continue-shopping">Tiếp tục mua sắm</a>
+            </div>
+            <div id="root"></div>
+        </div>
+
+        <div class="cart-summary">
+            <div class="cart-summary__label">Tổng số sản phẩm:</div>
+            <div id="quantity" class="cart-summary__value">0</div>
+            <div class="cart-summary__label">Tổng tiền:</div>
+            <div id="cost" class="cart-summary__value">0 đ</div>
+            <a href="paymentpage.html" class="cart-summary__checkout-btn">Thanh toán</a>
+        </div>
+    </main>
+    <script src="js/giohang.js" defer></script>
+
+</body>
+</html>

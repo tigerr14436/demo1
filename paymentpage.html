@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+    <header>
+        <h2>GIỎ HÀNG - Thanh Toán</h2>
+        <nav>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <a href="giohang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="payment-summary">
+            <h3>Thông tin đơn hàng</h3>
+            <div class="payment-summary__details" id="order-details"></div>
+            <div class="payment-summary__total">Tổng tiền: <span id="order-total"></span></div>
+            <button id="confirm-payment">Xác nhận thanh toán</button>
+        </div>
+    </main>
+    <script src="js/payment.js" defer></script>
+
+</body>
+
+</html>
